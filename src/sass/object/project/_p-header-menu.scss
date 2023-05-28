@@ -70,6 +70,7 @@
   align-items: center;
   text-decoration: none;
   padding: 0;
+  position: relative;
 
   @include mq(md) {
     display: inline-block;
@@ -77,9 +78,31 @@
     height: initial;
     padding: rem(10) 0;
     text-align: left;
-    
   }
 }
+
+.p-header-menu__item > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+// @media (hover: hover) {
+  .p-header-menu__item > a:hover {
+    opacity: 1;
+    &::after {
+      opacity: 1;
+    }
+  }
+// }
 
 .p-header-menu__en {
   &::first-letter {

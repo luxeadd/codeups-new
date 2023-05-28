@@ -1,0 +1,23 @@
+@use 'global' as * ; 
+
+.p-topContact {
+  
+}
+
+.p-topContact__wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.p-topContact__deco {
+  width: rem(301);
+  position: absolute;
+  top: rem(-50);
+  right: 0;
+  
+  @include mq(md) {
+    width: rem(109);
+    top: rem(-20);
+  }
+}
+

@@ -15,12 +15,152 @@ const baseMeta = {
   <!-- ヘッダー -->
   <%- include(baseMeta.path + 'common/_header', { baseMeta:baseMeta } ) %>
 
-  <div style="padding-top: 8000px;"></div>
+  <!-- MV -->
+  <div class="p-mv">
+    <div class="p-mv__slider js-mvSlider">
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv1.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp1.webp" alt="">
+        </picture>
+      </div>
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv2.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp2.webp" alt="">
+        </picture>
+      </div>
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv3.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp3.webp" alt="">
+        </picture>
+      </div>
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv4.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp4.webp" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="p-mv__main">
+      <h2 class="p-mv__title">diving</h2>
+      <p class="p-mv__subTitle">into the ocean</p>
+    </div>
+  </div>
+
+  <!-- キャンペーン -->
+  <div class="p-topCampaign l-topSection">
+    <div class="l-inner">
+      <div class="p-topCampaign__title">
+        <%- include(baseMeta.path + 'parts/_c-title', { mod:'', en:'campaign' , jp:'キャンペーン'} )%>
+      </div>
+      <div class="p-topCampaign__body">
+        <%- include(baseMeta.path + 'parts/_p-cardsCP', { param:'slider'})%>
+      </div>
+      <div class="p-topCampaign__btn">
+        <%- include(baseMeta.path + 'parts/_c-btnSlide', { link:'#', text:'View more'} )%>
+      </div>
+    </div>
+  </div>
+
+  <!-- 私たちについて -->
+  <div class="p-topAbout l-topSection">
+    <div class="p-topAbout__wrap l-inner-wrap">
+      <div class="l-inner l-inner--in">
+        <div class="p-topAbout__title">
+          <%- include(baseMeta.path + 'parts/_c-title', { mod:'', en:'about us' , jp:'私たちについて'} )%>
+        </div>
+        <div class="p-topAbout__body">
+          <%- include(baseMeta.path + 'parts/_p-media1', { param:'top', img1:"./assets/images/common/ocean1.jpg", alt1:"", img2:"./assets/images/common/ocean2.jpg", alt2:"", title:"Dive into<br>the Ocean", text:"ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト", })%>
+        </div>
+      </div>
+      <div class="p-topAbout__deco"><img src="./assets/images/common/about-deco.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- ダイビング情報 -->
+  <div class="p-topInformation l-topSection l-topSection--blue">
+    <div class="l-inner">
+      <div class="p-topInformation__title">
+        <%- include(baseMeta.path + 'parts/_c-title', { mod:'', en:'Information' , jp:'ダイビング情報'} )%>
+      </div>
+      <div class="p-topInformation__body">
+        <%- include(baseMeta.path + 'parts/_p-media2', { param:'top', img1:"./assets/images/common/ocean3.webp", alt1:"", title:"ライセンス講習", text:"当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。", })%>
+      </div>
+    </div>
+  </div>
+
+  <!-- ブログ -->
+  <div class="p-topBlog">
+    <div class="p-topBlog__wrap l-inner-wrap2">
+      <div class="l-inner l-inner--in">
+        <div class="p-topBlog__title">
+          <%- include(baseMeta.path + 'parts/_c-title', { mod:'c-title--white', en:'blog' , jp:'ブログ'} )%>
+        </div>
+        <div class="p-topBlog__body">
+          <%- include(baseMeta.path + 'parts/_p-cards', { param:'top'})%>
+        </div>
+        <div class="p-topBlog__btn">
+          <%- include(baseMeta.path + 'parts/_c-btnSlide', { link:'#', text:'View more'} )%>
+        </div>
+      </div>
+      <div class="p-topBlog__deco"><img src="./assets/images/common/fish-deco-white1.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- お客様の声 -->
+  <div class="p-topVoice l-topSection">
+    <div class="p-topVoice__wrap l-inner-wrap2">
+      <div class="p-topVoice__inner l-inner l-inner--in">
+        <div class="p-topVoice__title">
+          <%- include(baseMeta.path + 'parts/_c-title', { mod:'', en:'voice' , jp:'お客様の声'} )%>
+        </div>
+        <div class="p-topVoice__body">
+          <%- include(baseMeta.path + 'parts/_p-cards', { param:'top'})%>
+        </div>
+        <div class="p-topVoice__btn">
+          <%- include(baseMeta.path + 'parts/_c-btnSlide', { link:'#', text:'View more'} )%>
+        </div>
+        <div class="p-topVoice__deco2"><img src="./assets/images/common/dragon-deco-green1.png" alt=""></div>
+      </div>
+      <div class="p-topVoice__deco1"><img src="./assets/images/common/fish-deco-green1.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- 料金一覧 -->
+  <div class="p-topPrice l-topSection l-topSection--blue">
+    <div class="p-topPrice__wrap l-inner-wrap2">
+      <div class="p-topPrice__inner l-inner l-inner--in">
+        <div class="p-topPrice__title">
+          <%- include(baseMeta.path + 'parts/_c-title', { mod:'', en:'price' , jp:'料金一覧'} )%>
+        </div>
+        <div class="p-topPrice__body">
+          <%- include(baseMeta.path + 'parts/_p-media3', { param:'top'})%>
+        </div>
+        <div class="p-topPrice__btn">
+          <%- include(baseMeta.path + 'parts/_c-btnSlide', { link:'#', text:'View more'} )%>
+        </div>
+      </div>
+      <div class="p-topPrice__deco"><img src="./assets/images/common/fish-deco-green2.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- お問合せ -->
+  <div class="p-topContact l-topSection">
+    <div class="p-topContact__wrap l-inner-wrap3">
+      <div class="p-topContact__inner l-inner l-inner--in">
+        <%- include(baseMeta.path + 'parts/_p-contactLink', { param:'top'})%>
+      </div>
+      <div class="p-topContact__deco"><img src="./assets/images/common/fish-deco-green2.png" alt=""></div>
+    </div>
+  </div>
+
 
   <!-- ページトップボタン -->
   <%- include(baseMeta.path +'parts/_c-page-top') %>
   <!-- フッター -->
-  <%- include(baseMeta.path +'common/_footer') %>
+  <%- include(baseMeta.path +'common/_footer', {mod:"l-footer"}) %>
 </body>
 
 </html>

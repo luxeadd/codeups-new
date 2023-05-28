@@ -1,0 +1,28 @@
+@use 'global' as * ; 
+
+.p-topCampaign {
+  .l-inner {
+    position: relative;
+  }
+}
+.p-topCampaign__title {
+  text-align: center;
+}
+
+.p-topCampaign__body {
+  margin-top: rem(40);
+  margin-right: calc(50% - 50vw);
+  padding-bottom: rem(5);
+  @include mq(md) {
+    margin-top: rem(25);
+  }
+}
+
+.p-topCampaign__btn {
+  text-align: center;
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+

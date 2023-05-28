@@ -26,3 +26,11 @@
     margin-top: rem(4);
   }
 }
+
+.c-title--white {
+  .c-title__en,
+  .c-title__en::first-letter,
+  .c-title__jp {
+    color: $white;
+  }
+}

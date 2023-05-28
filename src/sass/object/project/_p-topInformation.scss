@@ -1,0 +1,19 @@
+@use 'global' as * ; 
+
+.p-topInformation {
+  padding: rem(100) 0;
+}
+
+.p-topInformation__title {
+  text-align: center;
+}
+
+.p-topInformation__body {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
+}
+
+

@@ -1,0 +1,31 @@
+@use 'global' as * ; 
+
+.p-topAbout__wrap {
+  position: relative;
+}
+
+.p-topAbout__title {
+  text-align: center;
+}
+
+.p-topAbout__body {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
+}
+
+.p-topAbout__deco {
+  width: rem(194);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  z-index: 2;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+

@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.p-cardsCP {
+  position: initial;
+  .c-slide-arrow {
+    position: absolute;
+    top: rem(0);
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
+    border: 1px solid $green;
+    z-index: 2;
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(40);
+      height: 1px;
+      background: $green;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .c-prev-arrow {
+    right: rem(185);
+    &::after {
+      content: "";
+      display: block;
+      width: rem(10);
+      height: 1px;
+      background: $green;
+      position: absolute;
+      top: 50%;
+      left: rem(20);
+      transform: rotate(-45deg) translateY(-50%);
+      transform-origin: top left;
+    }
+  }
+
+  .c-next-arrow {
+    right: rem(25);
+    &::after {
+      content: "";
+      display: block;
+      width: rem(10);
+      height: 1px;
+      background: $green;
+      position: absolute;
+      top: 50%;
+      right: rem(20);
+      transform: rotate(45deg) translateY(-50%);
+      transform-origin: top right;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    height: auto !important;
+    padding-bottom: rem(5);
+  }
+}
+
+.p-cardsCP__item {
+  width: rem(333);
+  @include mq(md) {
+    width: rem(280);
+  }
+}
+
+.p-cardsCP__item + .p-cardsCP__item {
+  margin-left: rem(30);
+  @include mq(md) {
+    margin-left: rem(25);
+  }
+}

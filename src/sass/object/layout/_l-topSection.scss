@@ -1,0 +1,12 @@
+@use 'global' as * ; 
+
+.l-topSection {
+  margin-top: rem(120);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.l-topSection--blue {
+  background: $light-blue;
+}

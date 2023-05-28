@@ -1,18 +1,25 @@
-@use 'global' as * ; 
+@use "global" as *;
 
 .c-page-top {
-  width: rem(45);
-  height: rem(45);
+  width: rem(80);
+  height: rem(80);
   background: $white;
+  border-radius: 50%;
+  border: 1px solid $green;
   position: fixed;
   bottom: rem(50);
   right: rem(20);
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   z-index: $page-top;
+
+  @include mq(md) {
+    width: rem(48);
+    height: rem(48);
+  }
 }
 .c-page-top.is-active {
   opacity: 1;
@@ -21,25 +28,40 @@
 }
 .c-page-top span:first-child {
   display: inline-block;
-  width: rem(20);
-  height: rem(2);
-  background: $back;
-  transform: rotate(-45deg) translateX(3px);
-  transform-origin: right;
-  transition: .3s;
+  width: 1px;
+  height: rem(40);
+  background: $green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s;
+  @include mq(md) {
+    height: rem(28);
+  }
 }
 .c-page-top span:nth-child(2) {
   display: inline-block;
-  width: rem(20);
-  height: rem(2);
-  background: $back;
-  transform: rotate(45deg)translateX(-3px);
-  transform-origin: left;
-  transition: .3s;
+  width: 1px;
+  height: rem(10);
+  background: $green;
+  position: absolute;
+  top: rem(20);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
+  transform-origin: top;
+  transition: background 0.3s;
+  @include mq(md) {
+    height: rem(8);
+    top: rem(10);
+  }
 }
-.c-page-top:hover {
-  background: $back;
-  span {
-    background: $white;
+
+@media (hover: hover) {
+  .c-page-top:hover {
+    background: $green;
+    span {
+      background: $white;
+    }
   }
 }
