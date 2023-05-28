@@ -1,0 +1,33 @@
+<% 
+const baseMeta = { 
+	path:'./',
+	}; 
+%>
+<div class="p-contactLink">
+  <div class="p-contactLink__contents">
+    <div class="p-contactLink__content1">
+      <div class="p-contactLink__logo"><img src="./assets/images/common/codeups.svg" alt="CoudeUps"></div>
+      <div class="p-contactLink__box">
+        <div class="p-contactLink__address">
+          <address>沖縄県那覇市1-1</address>
+          <tel>TEL:0120-000-0000</tel>
+          <p>営業時間:8:30-19:00</p>
+          <p>定休日:毎週火曜日</p>
+        </div>
+        <div class="p-contactLink__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.524215115973!2d127.67428875070901!3d26.21215131813341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bd6e046d289%3A0x345ffb669fadbd4f!2z6YKj6KaH5biC5b255omA!5e0!3m2!1sja!2sjp!4v1685254403438!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="p-contactLink__content2">
+      <div class="p-contactLink__title">
+        <h3 class="p-contactLink__title-en">Contact</h3>
+        <p class="p-contactLink__title-jp">お問い合わせ</p>
+        <p class="p-contactLink__text">ご予約・お問い合わせはコチラ</p>
+      </div>
+      <div class="p-contactLink__btn">
+        <%- include(baseMeta.path + '_c-btnSlide', { link:'#', text:'Contact us'} )%>
+      </div>
+    </div>
+  </div>
+</div>

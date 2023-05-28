@@ -1,0 +1,32 @@
+<% 
+const baseMeta = { 
+	path:'./'
+	}; 
+%>
+
+<div class="p-cardsVoice">
+  <% const voiceLists=[
+  {
+    sex:"20代(女性)" ,
+    cat:"ライセンス講習" ,
+    title:"ここにタイトルが入ります。ここにタイトル" ,
+    img:"./assets/images/common/voice1.jpg" ,
+    alt:"ライセンス取得" ,
+    text:"ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。" ,
+  },
+  {
+    sex:"30代(女性)" ,
+    cat:"ファンダイビング" ,
+    title:"ここにタイトルが入ります。ここにタイトル" ,
+    img:"./assets/images/common/voice2.jpg" ,
+    alt:"ライセンス取得" ,
+    text:"ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト" ,
+  },
+  ] %>
+
+  <% for (var voiceList of voiceLists) {%>
+  <article class="p-cardsVoice__item">
+    <%- include(baseMeta.path + '_c-cardVoice', { sex:voiceList.sex, cat:voiceList.cat , title:voiceList.title,  img:voiceList.img, alt:voiceList.alt, text:voiceList.text} )%>
+  </article>
+  <% } %>
+</div>

@@ -1,0 +1,102 @@
+<% 
+const baseMeta = { 
+	path:'./',
+	}; 
+%>
+<%# 記述例 : include(baseMeta.path + 'parts/_p-media3', { 
+  mod1:'',
+  mod2:'',
+  img:'./images/top/works2.jpg',
+  alt:'画像',
+  title:'メインタイトルが入ります。', 
+  text:'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+  btn:'#',
+		text2:'詳しく見る'
+  })%>
+<div class="p-media3">
+  <div class="p-media3__contents">
+    <div class="p-media3__top">
+      <div class="p-media3__items">
+        <div class="p-media3__item">
+          <h3 class="p-media3__title">ライセンス講習</h3>
+          <ul class="p-media3__lists">
+            <li class="p-media3__list">
+              <span class="p-media3__name">オープンウォーターダイバーコース</span>
+              <span class="p-media3__price">¥50,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">アドバンスドオープンウォーターコース</span>
+              <span class="p-media3__price">¥60,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">レスキュー＋EFRコース</span>
+              <span class="p-media3__price">¥70,000</span>
+            </li>
+          </ul>
+        </div>
+        <div class="p-media3__item">
+          <h3 class="p-media3__title">ライセンス講習</h3>
+          <ul class="p-media3__lists">
+            <li class="p-media3__list">
+              <span class="p-media3__name">オープンウォーターダイバーコース</span>
+              <span class="p-media3__price">¥50,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">アドバンスドオープンウォーターコース</span>
+              <span class="p-media3__price">¥60,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">レスキュー＋EFRコース</span>
+              <span class="p-media3__price">¥70,000</span>
+            </li>
+          </ul>
+        </div>
+        <div class="p-media3__item">
+          <h3 class="p-media3__title">ライセンス講習</h3>
+          <ul class="p-media3__lists">
+            <li class="p-media3__list">
+              <span class="p-media3__name">オープンウォーターダイバーコース</span>
+              <span class="p-media3__price">¥50,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">アドバンスドオープンウォーターコース</span>
+              <span class="p-media3__price">¥60,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">レスキュー＋EFRコース</span>
+              <span class="p-media3__price">¥70,000</span>
+            </li>
+          </ul>
+        </div>
+        <div class="p-media3__item">
+          <h3 class="p-media3__title">ライセンス講習</h3>
+          <ul class="p-media3__lists">
+            <li class="p-media3__list">
+              <span class="p-media3__name">オープンウォーターダイバーコース</span>
+              <span class="p-media3__price">¥50,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">アドバンスドオープンウォーターコース</span>
+              <span class="p-media3__price">¥60,000</span>
+            </li>
+            <li class="p-media3__list">
+              <span class="p-media3__name">レスキュー＋EFRコース</span>
+              <span class="p-media3__price">¥70,000</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="p-media3__img-box">
+      <figure class="p-media3__img1">
+        <picture>
+          <source srcset="./assets/images/common/price1.jpg" media="(min-width: 768px)" /><!-- 幅768px以上なら表示 -->
+          <img src="./assets/images/common/price1-sp.jpg" alt="">
+        </picture>
+      </figure>
+    </div>
+  </div>
+  <div class="p-media3__btn">
+    <%- include(baseMeta.path + '_c-btnSlide', { link:'#', text:'View more'} )%>
+  </div>
+</div>

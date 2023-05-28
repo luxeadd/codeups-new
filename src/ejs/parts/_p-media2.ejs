@@ -1,0 +1,29 @@
+<% 
+const baseMeta = { 
+	path:'./',
+	}; 
+%>
+<%# 記述例 : include(baseMeta.path + 'parts/_p-media2', { 
+  mod1:'',
+  mod2:'',
+  img:'./images/top/works2.jpg',
+  alt:'画像',
+  title:'メインタイトルが入ります。', 
+  text:'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+  btn:'#',
+		text2:'詳しく見る'
+  })%>
+<div class="p-media2">
+  <div class="p-media2__top">
+    <div class="p-media2__img1"><img src="<%= img1 %>" alt="<%= alt1 %>"></div>
+  </div>
+  <div class="p-media2__main">
+    <h3 class="p-media2__title"><%- title %></h3>
+    <div class="p-media2__text-box">
+      <p class="p-media2__text"><%- text %></p>
+    </div>
+    <div class="p-media2__btn">
+      <%- include(baseMeta.path + '_c-btnSlide', { link:'#', text:'View more'} )%>
+    </div>
+  </div>
+</div>

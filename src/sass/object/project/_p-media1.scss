@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.p-media1 {
+  position: relative;
+}
+
+.p-media1__top {
+}
+
+.p-media1__img1 {
+  width: calc(400 / 1080) * 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.p-media1__img2 {
+  width: calc(880 / 1080) * 100%;
+  margin-left: auto;
+  margin-top: -50%;
+}
+
+.p-media1__main {
+  width: 100%;
+  max-width: rem(920);
+  padding: 0 rem(40);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include mq(md) {
+    position: static;
+    top: initial;
+    right: initial;
+    transform: initial;
+    display: block;
+    padding: initial;
+    margin-top: rem(40);
+  }
+}
+
+.p-media1__title {
+  font-size: rem(80);
+  color: $white;
+  font-family: $gotu-font-family;
+  line-height: 1.25;
+  @include mq(md) {
+    font-size: rem(40);
+    color: $green;
+
+  }
+}
+
+.p-media1__text-box {
+  @include mq(md) {
+    margin-top: rem(15);
+  }
+}
+
+.p-media1__text {
+  font-size: rem(16);
+  color: $white;
+  @include mq(md) {
+    color: initial;
+  }
+}
+
+.p-media1__btn {
+  text-align: center;
+  margin-top: rem(40);
+}

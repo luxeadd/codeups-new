@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.c-title {
+}
+
+.c-title__en {
+  font-size: rem(40);
+  color: $dark-blue;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.c-title__en::first-letter {
+  text-transform: uppercase;
+  color: $green;
+}
+
+.c-title__jp {
+  margin-top: rem(5);
+  font-size: rem(12);
+  color: $green;
+
+  @include mq(md) {
+    margin-top: rem(4);
+  }
+}

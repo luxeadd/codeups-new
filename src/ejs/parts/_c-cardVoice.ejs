@@ -1,0 +1,18 @@
+<%# 記述例 : include(baseMeta.path + 'parts/_c-cardVoice', {img:'' , alt:'',  cat:'', title:'', plan:'', old:"", price:""} )%>
+<div class="c-cardVoice">
+  <div class="c-cardVoice__top">
+    <div class="c-cardVoice__box">
+      <div class="c-cardVoice__meta">
+        <span class="c-cardVoice__sex"><%= sex %></span>
+        <span class="c-cardVoice__cat"><%= cat %></span>
+      </div>
+      <h3 class="c-cardVoice__title"><%= title %></h3>
+    </div>
+    <figure class="c-cardVoice__img">
+      <img src="<%= img %>" alt="<%= alt %>">
+    </figure>
+  </div>
+  <div class="c-cardVoice__bottom">
+    <p class="c-cardVoice__text"><%= text %></p>
+  </div>
+</div>

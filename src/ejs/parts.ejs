@@ -1,0 +1,97 @@
+<% 
+const baseMeta = { 
+	title:'パーツページ', 
+	desc:'ディスクリプション',
+	path:'./',
+	page:'top',
+	}; 
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+<%- include(baseMeta.path + 'common/_head', { baseMeta:baseMeta } ) %>
+
+<body>
+  <!-- ヘッダー -->
+  <%- include(baseMeta.path + 'common/_header', { baseMeta:baseMeta } ) %>
+
+  <div class="p-mv">
+    <div class="p-mv__slider js-mvSlider">
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv1.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp1.webp" alt="">
+        </picture>
+      </div>
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv2.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp2.webp" alt="">
+        </picture>
+      </div>
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv3.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp3.webp" alt="">
+        </picture>
+      </div>
+      <div class="p-mv__img">
+        <picture>
+          <source srcset="./assets/images/common/mv4.webp" media="(min-width: 768px)" />
+          <img src="./assets/images/common/mv-sp4.webp" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="p-mv__main">
+      <h2 class="p-mv__title">diving</h2>
+      <p class="p-mv__subTitle">into the ocean</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 100px;"></div>
+
+  <div class="l-inner">
+    <%- include(baseMeta.path + 'parts/_c-btnSlide', { link:'#', text:'View more'} )%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_c-title', { mod:'', en:'about us' , jp:'私たちについて'} )%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_p-cards', { param:'top'})%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_p-cardsCP', { param:'slider'})%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_p-cardsVoice', { param:'top'})%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_p-media1', { param:'top', img1:"./assets/images/common/ocean1.jpg", alt1:"", img2:"./assets/images/common/ocean2.jpg", alt2:"", title:"Dive into<br>the Ocean", text:"ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト", })%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_p-media2', { param:'top', img1:"./assets/images/common/ocean3.webp", alt1:"", title:"ライセンス講習", text:"当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。", })%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_p-media3', { param:'top'})%>
+
+    <div style="margin-top: 100px;"></div>
+
+    <%- include(baseMeta.path + 'parts/_p-contactLink', { param:'top'})%>
+
+
+  </div>
+
+  <!-- ページトップボタン -->
+  <%- include(baseMeta.path +'parts/_c-page-top') %>
+  <!-- フッター -->
+  <%- include(baseMeta.path +'common/_footer') %>
+</body>
+
+</html>
