@@ -68,7 +68,11 @@
 .p-contactLink__address {
   flex: 0 0 rem(146);
   font-size: rem(16);
-  font-family: $dark-blue;
+  color: $dark-blue;
+
+  * {
+    display: block;
+  }
 
   * + * {
     margin-top: rem(10);

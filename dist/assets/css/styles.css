@@ -17,7 +17,6 @@
 body {
 	background: #fff;
 	color: #000;
-	font-size: 400;
 	line-height: 1.5;
 }
 
@@ -1260,12 +1259,16 @@ th {
 }
 
 .p-contactLink__address {
+	color: #0D2936;
 	-webkit-box-flex: 0;
 	-webkit-flex: 0 0 9.125rem;
 	-ms-flex: 0 0 9.125rem;
 	flex: 0 0 9.125rem;
-	font-family: #0D2936;
 	font-size: 1rem;
+}
+
+.p-contactLink__address * {
+	display: block;
 }
 
 .p-contactLink__address * + * {
@@ -1433,7 +1436,7 @@ th {
 
 .p-footer__spList a {
 	display: block;
-	font-size: ren(16);
+	font-size: 1rem;
 	height: 100%;
 	padding: 0.625rem 0;
 	width: 100%;
@@ -2424,7 +2427,7 @@ a {
 
 .p-header-menu__spList a {
 	display: block;
-	font-size: ren(16);
+	font-size: 1rem;
 	height: 100%;
 	padding: 0.625rem 0;
 	width: 100%;
