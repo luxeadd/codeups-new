@@ -10,10 +10,10 @@ $padding-sp: 15px;
 /********************************
 * フォント
 ********************************/
-$base-font-family: 'Noto Sans JP', sans-serif;
-$serif-font-family: 'Noto Serif', serif;
-$gotu-font-family: 'Gotu', sans-serif;
-$lato-font-family: 'Lato', sans-serif;
+$base-font-family: "Noto Sans JP", sans-serif;
+$serif-font-family: "Noto Serif", serif;
+$gotu-font-family: "Gotu", sans-serif;
+$lato-font-family: "Lato", sans-serif;
 // $base-font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 // $base-font-family: "Noto Serif JP", serif;
 // $sub-font-family: "Zen Maru Gothic", sans-serif;
@@ -29,7 +29,6 @@ $semi-bold: 600;
 $bold: 700;
 $ex-bold: 800;
 
-
 /********************************
 * カラー
 ********************************/
@@ -38,15 +37,12 @@ $base-background: #fff;
 $back: #333;
 $black: #333;
 $white: #fff;
-$green: #408F95;
-$blue: #796A64;
-$gray: #F2F2F2;
-$light-blue: #DDF0F1;
-$dark-blue: #0D2936;
-$red: #C94800;
-
-
-
+$green: #408f95;
+$blue: #796a64;
+$gray: #f2f2f2;
+$light-blue: #ddf0f1;
+$dark-blue: #0d2936;
+$red: #c94800;
 
 /********************************
 * z-index
@@ -56,9 +52,14 @@ $hamburger: 103;
 $drawer: 102;
 $drawer-back: 101;
 $page-top: 99;
+$lording: 104;
 
 body {
   color: $base-color;
   background: $base-background;
   line-height: 1.5;
+}
+
+.is-screen-locked {
+  overflow: hidden;
 }

@@ -2,6 +2,9 @@
 
 .p-topInformation {
   padding: rem(100) 0;
+  @include mq(md) {
+    padding: rem(80) 0;
+  }
 }
 
 .p-topInformation__title {

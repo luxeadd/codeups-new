@@ -33,4 +33,15 @@
   .c-title__jp {
     color: $white;
   }
+
+  @include mq(md) {
+    .c-title__en,
+    .c-title__jp {
+      color: $dark-blue;
+    }
+
+    .c-title__en::first-letter {
+      color: $green;
+    }
+  }
 }

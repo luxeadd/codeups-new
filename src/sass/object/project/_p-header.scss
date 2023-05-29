@@ -10,8 +10,17 @@
   width: 100%;
   z-index: $header;
   transition: 0.3s;
+
+  opacity: 0;
+  animation-name: fadeUp;
+  animation-fill-mode:forwards;
+  animation-duration:.5s;
+  animation-timing-function:ease;
+  animation-delay: 3.5s;
   @include mq(md) {
     height: rem(80);
+    opacity: 1;
+    animation: none;
   }
 }
 

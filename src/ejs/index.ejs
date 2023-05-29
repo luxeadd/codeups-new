@@ -15,14 +15,30 @@ const baseMeta = {
   <!-- ヘッダー -->
   <%- include(baseMeta.path + 'common/_header', { baseMeta:baseMeta } ) %>
 
+  <!-- MVファーストアニメーション -->
+  <div class="p-mv p-mv--first">
+    <div class="p-mv__main p-mv__main--first">
+      <h2 class="p-mv__title p-mv__title--first">diving</h2>
+      <p class="p-mv__subTitle p-mv__subTitle--first">into the ocean</p>
+    </div>
+  </div>
+
   <!-- MV -->
   <div class="p-mv">
     <div class="p-mv__slider js-mvSlider">
-      <div class="p-mv__img">
-        <picture>
-          <source srcset="./assets/images/common/mv1.webp" media="(min-width: 768px)" />
-          <img src="./assets/images/common/mv-sp1.webp" alt="" decoding="async">
-        </picture>
+      <div class="p-mv__img p-mv__img--first">
+        <div class="p-mv__left">
+          <picture>
+            <source srcset="./assets/images/common/mv1-left.webp" media="(min-width: 768px)" />
+            <img src="./assets/images/common/mv1-sp-left.webp" alt="" decoding="async">
+          </picture>
+        </div>
+        <div class="p-mv__right">
+          <picture>
+            <source srcset="./assets/images/common/mv1-right.webp" media="(min-width: 768px)" />
+            <img src="./assets/images/common/mv1-sp-right.webp" alt="" decoding="async">
+          </picture>
+        </div>
       </div>
       <div class="p-mv__img">
         <picture>
@@ -117,7 +133,7 @@ const baseMeta = {
           <%- include(baseMeta.path + 'parts/_c-title', { mod:'', en:'voice' , jp:'お客様の声'} )%>
         </div>
         <div class="p-topVoice__body">
-          <%- include(baseMeta.path + 'parts/_p-cards', { param:'top'})%>
+          <%- include(baseMeta.path + 'parts/_p-cardsVoice', { param:'top'})%>
         </div>
         <div class="p-topVoice__btn">
           <%- include(baseMeta.path + 'parts/_c-btnSlide', { link:'#', text:'View more'} )%>

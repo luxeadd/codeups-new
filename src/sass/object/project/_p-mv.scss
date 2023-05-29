@@ -1,9 +1,23 @@
-@use 'global' as * ; 
-
+@use "global" as *;
 
 .p-mv {
   width: 100vw;
   height: 100vh;
+  position: relative;
+}
+
+.p-mv.p-mv--first {
+  z-index: $lording;
+  background: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation-name: fadeDown;
+  animation-fill-mode:forwards;
+  animation-duration: 2s;
+  animation-timing-function:ease;
+  animation-delay: 2s;
 }
 
 .p-mv__slider {
@@ -30,6 +44,38 @@
   }
 }
 
+.p-mv__img.p-mv__img--first {
+  display: flex;
+  overflow: hidden;
+}
+
+.p-mv__left {
+  width: 50%;
+  transform: translateY(100%) scale(0.7);
+  animation-name: slideUp;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+  animation-timing-function:ease;
+  animation-delay: 2s;
+  img {
+    object-fit: cover;
+    object-position: right;
+  }
+}
+.p-mv__right {
+  width: 50%;
+  transform: translateY(100%) scale(0.7);
+  animation-name: slideUp;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+  animation-timing-function:ease;
+  animation-delay: 2.2s;
+  img {
+    object-fit: cover;
+    object-position: left;
+  }
+}
+
 .p-mv__main {
   position: absolute;
   top: 50%;
@@ -37,6 +83,27 @@
   width: fit-content;
   transform: translate(-50%, -50%);
   z-index: 2;
+
+  opacity: 0;
+  animation-name: fadeUp;
+  animation-fill-mode:forwards;
+  animation-duration:.5s;
+  animation-timing-function:ease;
+  animation-delay: 3.5s;
+}
+
+.p-mv__main.p-mv__main--first {
+  opacity: 0;
+  transform:translate(-50%, 100%);
+  animation-name: fadeUpSlide;
+  animation-fill-mode:forwards;
+  animation-duration: .8s;
+  animation-timing-function:ease;
+  animation-delay: .3s;
+}
+
+.p-mv__main.p-mv__main-normal {
+
 }
 
 .p-mv__title {
@@ -53,12 +120,18 @@
   }
 }
 
+.p-mv__title.p-mv__title--first {
+  color: $green;
+}
+
 .p-mv__subTitle {
   font-size: rem(20);
   font-family: $gotu-font-family;
   color: $white;
   text-align: center;
   margin-top: rem(20);
-
 }
 
+.p-mv__subTitle.p-mv__subTitle--first {
+  color: $green;
+}

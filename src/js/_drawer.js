@@ -27,11 +27,11 @@ export function drawer() {
     if (this.getAttribute("aria-expanded") == "false") {
       this.setAttribute("aria-expanded", "true");
       spHeaderMenu.setAttribute("aria-hidden", "false");
-      screenLock();
+      body.classList.add("is-screen-locked");
     } else {
       this.setAttribute("aria-expanded", "false");
       spHeaderMenu.setAttribute("aria-hidden", "true");
-      screenUnLock();
+      body.classList.remove("is-screen-locked");
     }
   });
   //ドラワーメニュー展開時背景クリックアクション

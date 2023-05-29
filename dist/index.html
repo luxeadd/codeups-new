@@ -32,6 +32,7 @@
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./assets/js/jquery.inview.min.js?"></script>
   <script defer src="./assets/js/script.js?20230528"></script>
 </head>
 <body>
@@ -130,14 +131,29 @@
       <div class="p-header__overlay" id="js-header__overlay"></div>
     </div>
   </header>
+  <!-- MVファーストアニメーション -->
+  <div class="p-mv p-mv--first">
+    <div class="p-mv__main p-mv__main--first">
+      <h2 class="p-mv__title p-mv__title--first">diving</h2>
+      <p class="p-mv__subTitle p-mv__subTitle--first">into the ocean</p>
+    </div>
+  </div>
   <!-- MV -->
   <div class="p-mv">
     <div class="p-mv__slider js-mvSlider">
-      <div class="p-mv__img">
-        <picture>
-          <source srcset="./assets/images/common/mv1.webp" media="(min-width: 768px)" />
-          <img src="./assets/images/common/mv-sp1.webp" alt="" decoding="async">
-        </picture>
+      <div class="p-mv__img p-mv__img--first">
+        <div class="p-mv__left">
+          <picture>
+            <source srcset="./assets/images/common/mv1-left.webp" media="(min-width: 768px)" />
+            <img src="./assets/images/common/mv1-sp-left.webp" alt="" decoding="async">
+          </picture>
+        </div>
+        <div class="p-mv__right">
+          <picture>
+            <source srcset="./assets/images/common/mv1-right.webp" media="(min-width: 768px)" />
+            <img src="./assets/images/common/mv1-sp-right.webp" alt="" decoding="async">
+          </picture>
+        </div>
       </div>
       <div class="p-mv__img">
         <picture>
@@ -271,7 +287,7 @@
           <div class="p-media1">
             <div class="p-media1__top">
               <div class="p-media1__img1"><img src="./assets/images/common/ocean1.jpg" alt=""></div>
-              <div class="p-media1__img2"><img src="./assets/images/common/ocean2.jpg" alt=""></div>
+              <div class="p-media1__img2 u-colorbox"><img src="./assets/images/common/ocean2.jpg" alt=""></div>
             </div>
             <div class="p-media1__main">
               <h3 class="p-media1__title">Dive into<br>the Ocean</h3>
@@ -304,7 +320,7 @@
       <div class="p-topInformation__body">
         <div class="p-media2">
           <div class="p-media2__top">
-            <div class="p-media2__img1"><img src="./assets/images/common/ocean3.webp" alt=""></div>
+            <div class="p-media2__img1 u-colorbox"><img src="./assets/images/common/ocean3.webp" alt=""></div>
           </div>
           <div class="p-media2__main">
             <h3 class="p-media2__title">ライセンス講習</h3>
@@ -401,48 +417,44 @@
           </div>
         </div>
         <div class="p-topVoice__body">
-          <div class="p-cards">
-            <article class="p-cards__item">
-              <a class="c-card" href=" ">
-                <figure class="c-card__img">
-                  <img src="./assets/images/common/card1.jpg" alt=" ">
-                </figure>
-                <div class="c-card__body">
-                  <time class="c-card__date" datetime="">2023.11/17</time>
-                  <h3 class="c-card__title">ライセンス取得</h3>
+          <div class="p-cardsVoice">
+            <article class="p-cardsVoice__item">
+              <div class="c-cardVoice">
+                <div class="c-cardVoice__top">
+                  <div class="c-cardVoice__box">
+                    <div class="c-cardVoice__meta">
+                      <span class="c-cardVoice__sex">20代(女性)</span>
+                      <span class="c-cardVoice__cat">ライセンス講習</span>
+                    </div>
+                    <h3 class="c-cardVoice__title">ここにタイトルが入ります。ここにタイトル</h3>
+                  </div>
+                  <figure class="c-cardVoice__img u-colorbox">
+                    <img src="./assets/images/common/voice1.jpg" alt="ライセンス取得">
+                  </figure>
                 </div>
-                <div class="c-card__bottom">
-                  <p class="c-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                <div class="c-cardVoice__bottom">
+                  <p class="c-cardVoice__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。&lt;br&gt;ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。&lt;br&gt;ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
-              </a>
+              </div>
             </article>
-            <article class="p-cards__item">
-              <a class="c-card" href=" ">
-                <figure class="c-card__img">
-                  <img src="./assets/images/common/card2.jpg" alt=" ">
-                </figure>
-                <div class="c-card__body">
-                  <time class="c-card__date" datetime="">2023.11/17</time>
-                  <h3 class="c-card__title">ウミガメと泳ぐ</h3>
+            <article class="p-cardsVoice__item">
+              <div class="c-cardVoice">
+                <div class="c-cardVoice__top">
+                  <div class="c-cardVoice__box">
+                    <div class="c-cardVoice__meta">
+                      <span class="c-cardVoice__sex">30代(女性)</span>
+                      <span class="c-cardVoice__cat">ファンダイビング</span>
+                    </div>
+                    <h3 class="c-cardVoice__title">ここにタイトルが入ります。ここにタイトル</h3>
+                  </div>
+                  <figure class="c-cardVoice__img u-colorbox">
+                    <img src="./assets/images/common/voice2.jpg" alt="ライセンス取得">
+                  </figure>
                 </div>
-                <div class="c-card__bottom">
-                  <p class="c-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                <div class="c-cardVoice__bottom">
+                  <p class="c-cardVoice__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
                 </div>
-              </a>
-            </article>
-            <article class="p-cards__item">
-              <a class="c-card" href=" ">
-                <figure class="c-card__img">
-                  <img src="./assets/images/common/card3.jpg" alt=" ">
-                </figure>
-                <div class="c-card__body">
-                  <time class="c-card__date" datetime="">2023.11/17</time>
-                  <h3 class="c-card__title">カクレクマノミ</h3>
-                </div>
-                <div class="c-card__bottom">
-                  <p class="c-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                </div>
-              </a>
+              </div>
             </article>
           </div>
         </div>
@@ -544,7 +556,7 @@
                 </div>
               </div>
               <div class="p-media3__img-box">
-                <figure class="p-media3__img1">
+                <figure class="p-media3__img1 u-colorbox">
                   <picture>
                     <source srcset="./assets/images/common/price1.jpg" media="(min-width: 768px)" /><!-- 幅768px以上なら表示 -->
                     <img src="./assets/images/common/price1-sp.jpg" alt="">

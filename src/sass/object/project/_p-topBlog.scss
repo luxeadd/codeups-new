@@ -3,6 +3,9 @@
 .p-topBlog {
   padding-top: rem(100);
   position: relative;
+  @include mq(md) {
+    padding-top: rem(80);
+  }
 }
 
 .p-topBlog::before {
@@ -15,6 +18,10 @@
   top: 0;
   left: 0;
   right: 0;
+
+  @include mq(md) {
+    content: none;
+  }
 }
 
 .p-topBlog__wrap {
