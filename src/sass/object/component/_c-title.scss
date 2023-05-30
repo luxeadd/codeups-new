@@ -6,6 +6,7 @@
 .c-title__en {
   font-size: rem(40);
   color: $dark-blue;
+  font-family: $gotu-font-family;
 
   @include mq(md) {
     font-size: rem(32);
