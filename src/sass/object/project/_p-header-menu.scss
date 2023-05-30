@@ -90,19 +90,19 @@
   position: absolute;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s;
+  transform: translate(-50%, -50%) scale(0,1);
+  transform-origin: top center;
+  transition: transform 0.3s;
 }
 
-// @media (hover: hover) {
+@media (hover: hover) {
   .p-header-menu__item > a:hover {
     opacity: 1;
     &::after {
-      opacity: 1;
+      transform: translate(-50%, -50%) scale(1,1);
     }
   }
-// }
+}
 
 .p-header-menu__en {
   &::first-letter {
