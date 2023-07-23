@@ -759,7 +759,6 @@ th {
 }
 
 .c-cardCP__title {
-	border-bottom: 1px solid #408f95;
 	font-size: 1rem;
 	font-weight: 500;
 	margin-top: 0.625rem;
@@ -767,10 +766,11 @@ th {
 }
 
 .c-cardCP__bottom {
+	border-top: 1px solid #408f95;
+	margin-left: 0.9375rem;
+	margin-right: 0.9375rem;
 	margin-top: auto;
 	padding-bottom: 1.5625rem;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
 	padding-top: 1rem;
 }
 

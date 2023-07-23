@@ -60,15 +60,15 @@
   font-size: rem(16);
   font-weight: $medium;
   padding-bottom: rem(5);
-  border-bottom: 1px solid $green;
   margin-top: rem(10);
 }
 
 .c-cardCP__bottom {
+  border-top: 1px solid $green;
   margin-top: auto;
   padding-top: rem(16);
-  padding-left: rem(15);
-  padding-right: rem(15);
+  margin-left: rem(15);
+  margin-right: rem(15);
   padding-bottom: rem(25);
 }
 

@@ -35,8 +35,6 @@ export function slider() {
     
 
     $(".js-campaignSlider").slick({
-      autoplay: true, //自動再生（初期値：false）
-      autoplaySpeed: 2000, //自動スライド間隔
       speed: 1000, //スライドやフェードの速度（初期値：300）単位はミリ秒
       variableWidth: true, //コンテンツの幅の維持して画面幅が広がれば要素数を増やす（CSSでコンテンツにwidthの設定が必要）
       pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
